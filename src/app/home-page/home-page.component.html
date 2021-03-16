@@ -1,6 +1,8 @@
 <app-header></app-header>
 <div class="cards">
-    <div class="card" *ngFor="let card of cards">
-        {{ card }}
+    <div class="card" *ngFor="let card of cards; let i = index">
+        <div *ngIf="i % 3 === 0" class="row">
+            {{ cards[i] }} {{ cards[i+1] }} {{ cards[i+2] }}
+        </div>
     </div>
 </div>

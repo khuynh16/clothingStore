@@ -1,9 +1,11 @@
 .cards {
     display: flex;
+    justify-content: space-evenly;
+    padding-top: 5vh;
 }
 
 .card {
     border: 1px solid black;
-    width: 30%;
+    width: 25%;
     height: 300px;
 }
