@@ -1,5 +1,8 @@
 :host {
-    background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    /* background-color: #9FFFF5; */
+    /* background-image: linear-gradient( 135deg, #92FFC0 10%, #002661 100%); */
+    background-image: linear-gradient( 135deg, #7CFFC4 10%, #6ABEA7 100%);
+    display: block;
 }
 
 .cards {
@@ -11,6 +14,8 @@
     border: 1px solid black;
     width: 25%;
     height: 300px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .row {

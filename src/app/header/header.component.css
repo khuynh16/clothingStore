@@ -31,6 +31,8 @@ button {
     width: 90%;
     height: 90%;
     color: #9FFFF5;
+    outline: none;
+    cursor: pointer;
 }
 
 button:hover {
