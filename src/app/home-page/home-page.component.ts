@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  cards = [
+    'card1',
+    'card2',
+    'card3'
+  ];
 
   constructor() { }
 
