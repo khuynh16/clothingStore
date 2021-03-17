@@ -13,9 +13,7 @@
 .card {
     border: 1px solid black;
     width: 25%;
-    height: 300px;
     background-color: white;
-    border-radius: 10px;
 }
 
 .row {
@@ -28,4 +26,19 @@
 
 .cards:last-child {
     padding-bottom: 7vh;
+}
+
+/* the css for the cards from angular material */
+.example-card {
+    max-width: 400px;
+    height: 100%;
+}
+
+.example-card img {
+    padding: 0 10px;
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
 }

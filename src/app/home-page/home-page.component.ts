@@ -6,6 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  // male shirt from: http://clipart-library.com/clipart/5cRXqAxEi.htm
+  // female shirt from: https://wdrfree.com/stock-vector/female-t-shirt
+  // hat from: https://grandcast.com.hk/headwear-templates
+  images = [
+    '../../assets/images/male shirt template.jpeg',
+    '../../assets/images/female shirt template.png',
+    '../../assets/images/hat template.png',
+    '../../assets/images/male shirt template.jpeg',
+    '../../assets/images/male shirt template.jpeg',
+    '../../assets/images/hat template.png',
+    '../../assets/images/hat template.png',
+    '../../assets/images/hat template.png',
+    '../../assets/images/female shirt template.png',
+  ];
+
   cards = [
     'card1',
     'card2',
