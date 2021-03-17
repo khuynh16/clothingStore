@@ -18,9 +18,25 @@
                 </p>
                 </mat-card-content>
                 <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>ADD TO CART</button>
-                $19.99
+                    <!-- <mat-form-field appearance="fill">
+                        <mat-label>Cars</mat-label>
+                        <select matNativeControl>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        </select>
+                    </mat-form-field> -->
+                    <mat-form-field appearance="fill">
+                        <mat-label>Size</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let size of sizes" [value]="size">
+                            {{ size }}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    <button mat-button>ADD TO CART</button>
+                    $19.99
                 </mat-card-actions>
             </mat-card>
         </span>

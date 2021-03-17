@@ -21,16 +21,48 @@ export class HomePageComponent implements OnInit {
     '../../assets/images/female shirt template.png',
   ];
 
+  sizes = ['small', 'medium', 'large'];
+
   cards = [
-    'card1',
-    'card2',
-    'card3',
-    'card4',
-    'card5',
-    'card6',
-    'card7',
-    'card8',
-    'card9'
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+      'context': 'this is a paragraph',
+      'sizes': ['small', 'medium', 'large'],
+      'price': 19.99
+    },
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+    },
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+    },
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+    },
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+    },
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+    },
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+    },
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+    },
+    {
+      'title': 'example title',
+      'subtitle': 'subtitle here',
+    },
   ];
 
   constructor() { }
