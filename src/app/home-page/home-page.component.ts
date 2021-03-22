@@ -21,64 +21,78 @@ export class HomePageComponent implements OnInit {
     '../../assets/images/female shirt template.png',
   ];
 
-  // sizes = ['small', 'medium', 'large'];
-
   cards = [
     {
-      'title': 'example title',
-      'subtitle': 'subtitle here',
-      'context': 'this is a paragraph',
+      'title': 'Men\'s T-shirt',
+      'subtitle': 'Astronaut Design',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
-      'price': 19.99
+      'price': 19.99,
+      'categories': ['Men', 'Shirts']
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+      'price': 59.99,
+      'categories': ['Women', 'Shirts']
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+      'price': 35.99,
+      'categories': ['Hats']
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+      'price': 80.99,
+      'categories': ['Men', 'Shirts']
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+      'price': 40.99,
+      'categories': ['Men', 'Shirts']
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+      'price': 29.99,
+      'categories': ['Hats']
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+      'price': 39.99,
+      'categories': ['Hats']
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+      'price': 49.99,
+      'categories': ['Hats']
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+      'price': 19.99,
+      'categories': ['Women', 'Shirts']
     },
   ];
 

@@ -36,6 +36,7 @@
 
 .example-card img {
     padding: 0 10px;
+    max-height: 250px;
 }
   
 .example-header-image {
@@ -47,6 +48,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    padding: 0;
 }
 
 :host ::ng-deep mat-card-actions > * {
@@ -67,7 +69,8 @@
     flex-direction: column;
 }
 
-:host ::ng-deep .addToCartAndPrice .mat-button {
+:host ::ng-deep .addToCartAndPrice .mat-button,
+:host ::ng-deep .categories button {
     border: 1px solid black;
 }
 
@@ -89,6 +92,13 @@
 }
 
 .categories > * {
-    margin: 0 5px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px !important;
+    background-color: rgb(94 106 115);
+}
+
+:host ::ng-deep .categories button .mat-button-wrapper {
+    color: #9ffff5;
 }
