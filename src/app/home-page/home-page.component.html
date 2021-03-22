@@ -24,6 +24,14 @@
                           </mat-option>
                         </mat-select>
                     </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Color</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let color of card.colors" [value]="color">
+                            {{ color }}
+                          </mat-option>
+                        </mat-select>
+                    </mat-form-field>
                     <div class="addToCartAndPrice">
                         <button mat-button>ADD TO CART</button>
                         <span class="price">$19.99</span>

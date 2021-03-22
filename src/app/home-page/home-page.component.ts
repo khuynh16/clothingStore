@@ -29,47 +29,56 @@ export class HomePageComponent implements OnInit {
       'subtitle': 'subtitle here',
       'context': 'this is a paragraph',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 19.99
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
+      'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
     },
   ];
 
