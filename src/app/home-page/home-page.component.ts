@@ -21,7 +21,7 @@ export class HomePageComponent implements OnInit {
     '../../assets/images/female shirt template.png',
   ];
 
-  sizes = ['small', 'medium', 'large'];
+  // sizes = ['small', 'medium', 'large'];
 
   cards = [
     {
@@ -34,34 +34,42 @@ export class HomePageComponent implements OnInit {
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
+      'sizes': ['small', 'medium', 'large'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
+      'sizes': ['small', 'medium', 'large'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
+      'sizes': ['small', 'medium', 'large'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
+      'sizes': ['small', 'medium', 'large'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
+      'sizes': ['small', 'medium', 'large'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
+      'sizes': ['small', 'medium', 'large'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
+      'sizes': ['small', 'medium', 'large'],
     },
     {
       'title': 'example title',
       'subtitle': 'subtitle here',
+      'sizes': ['small', 'medium', 'large'],
     },
   ];
 

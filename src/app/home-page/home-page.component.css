@@ -42,3 +42,45 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
 }
+
+:host ::ng-deep mat-card-actions {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+:host ::ng-deep mat-card-actions > * {
+    padding: 10px;
+}
+
+:host ::ng-deep mat-card {
+    display: flex;
+    flex-direction: column;
+}
+
+:host ::ng-deep .addToCartAndPrice .mat-button {
+    border: 1px solid black;
+}
+
+.price {
+    padding: 0 16px;
+}
+
+.addToCartAndPrice {
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    flex-grow: 1;
+}
+
+.categories > * {
+    margin: 0 5px;
+    padding: 5px;
+}
