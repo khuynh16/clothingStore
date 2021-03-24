@@ -1,0 +1,50 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit(form)"class="example-form">
+    <div class="formHeading">
+        <mat-icon matPrefix>stars</mat-icon>
+        <h3>{{ formTitle }}</h3>
+        <mat-icon matPrefix>stars</mat-icon>
+    </div>
+    <div class="userInputs">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-icon matPrefix>email</mat-icon>
+            <mat-label class="test">Email</mat-label>
+            <input formControlName="email" class="test" matInput>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-icon matPrefix>lock</mat-icon>
+            <mat-label class="test">Password</mat-label>
+            <input formControlName="password" class="test" type="password" matInput>
+        </mat-form-field>
+        <mat-form-field 
+            *ngIf="currentRoute === 'signup'" 
+            class="example-full-width" 
+            appearance="outline">
+            <mat-icon matPrefix>lock</mat-icon>
+            <mat-label class="test">Confirm Password</mat-label>
+            <input formControlName="confirmPassword" class="test" type="password" matInput>
+        </mat-form-field>
+        <mat-form-field 
+            *ngIf="currentRoute === 'signup'" 
+            class="example-full-width" 
+            appearance="outline">
+            <mat-icon matPrefix>account_circle</mat-icon>
+            <mat-label class="test">Display Name</mat-label>
+            <input formControlName="displayName" class="test" matInput>
+        </mat-form-field>
+    </div>
+    <div class="nav-footer">
+        <p>
+            {{ navStatement }}
+            <a 
+                [routerLink]="currentRoute === 'sign-up' ? ['/sign-in'] : ['/sign-up']" 
+                class="signInText">
+                {{ navLink }}
+            </a>
+        </p>
+        <button 
+            type="submit"
+            mat-stroked-button color="primary">
+            Register
+        </button>
+    </div>
+  </form>

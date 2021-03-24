@@ -1,6 +1,8 @@
 <mat-toolbar>
     <div class="logo">
-        Clothing Store :D
+        <button mat-button routerLink="/home">
+            Clothing Store :D
+        </button>
     </div>
     <div class="clothingNavButtons">
         <button mat-button>Men</button>
@@ -12,7 +14,7 @@
     </div>
     <div class="optionsButtons">
         <button mat-button>Contact Us</button>
-        <button mat-button>Sign In</button>
-        <button mat-button><mat-icon>shopping_cart</mat-icon>Your Cart</button>
+        <button mat-button routerLink="/sign-in">Sign In</button>
+        <button mat-button routerLink="/cart"><mat-icon>shopping_cart</mat-icon>Your Cart</button>
     </div>
 </mat-toolbar>
