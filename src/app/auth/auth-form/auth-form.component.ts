@@ -43,7 +43,7 @@ export class AuthFormComponent implements OnInit {
   onSubmit(form: FormGroup) {
     console.log('hello');
     console.log(form.value);
-    this.router.navigate(['home-page']);
+    this.router.navigate(['home']);
   }
 
 }

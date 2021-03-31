@@ -69,15 +69,19 @@ mat-form-field {
     /* border-color: white; */
 }
 
-/* :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: white;
-} */
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black;
+}
 
 .nav-footer {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.nav-footer button {
+    border-color: black;
 }
 
 .signInText {
