@@ -1,0 +1,86 @@
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient( 135deg, #7CFFC4 10%, #6ABEA7 100%);
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+
+}
+
+form {
+    /* border: 1px solid white; */
+    width: 70%;
+    max-width: 700px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: inset 2000px 2000px 2000px rgb(231 231 231 / 50%);
+
+    /* background: linear-gradient(to top right, rgba(255,255,255,0.7), rgba(255,255,255,0.3)); */
+    /* backdrop-filter: blur(2rem); */
+}
+
+.formHeading {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userInputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+h3 {
+    color: black;
+}
+
+form button {
+    /* border-color: white; */
+    color: black;
+}
+
+.test {
+    padding-left: 10px;
+}
+
+.mat-icon { 
+    vertical-align: middle;
+}
+/* 
+::ng-deep mat-label,
+::ng-deep mat-form-field input {
+    color: rgb(255, 255, 255);
+} */
+
+mat-form-field {
+    width: 85%;
+    /* border-color: white; */
+}
+
+/* :host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white;
+} */
+
+.nav-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.signInText {
+    color: rgb(38, 117, 143);
+    text-decoration: none;
+}
