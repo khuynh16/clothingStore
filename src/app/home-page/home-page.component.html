@@ -1,8 +1,8 @@
 <app-header></app-header>
-<div class="cards" *ngFor="let card of cards; let i = index">
-    <div *ngIf="i % 3=== 0" class="row">
+<div class="cards">
+    <div class="wrapper">
         <!-- The first card in each row -->
-        <span class="card">
+        <div class="card" *ngFor="let card of cards; let i = index">
             <mat-card class="example-card">
                 <mat-card-header>
                     <mat-card-title>{{ cards[i].title }}</mat-card-title>
@@ -40,83 +40,7 @@
                     </div>
                 </mat-card-actions>
             </mat-card>
-        </span>
-        <!-- The second card in each row -->
-        <span class="card" *ngIf="i + 1 < cards.length">
-            <mat-card class="example-card">
-               <mat-card-header>
-                    <mat-card-title>{{ cards[i+1].title }}</mat-card-title>
-                    <mat-card-subtitle>{{ cards[i+1].subtitle }}</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="{{ images[i+1] }}" alt="Photo of a Shiba Inu">
-                <mat-card-content></mat-card-content>
-                <mat-card-actions>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Size</mat-label>
-                        <mat-select>
-                          <mat-option *ngFor="let size of cards[i+1].sizes" [value]="size">
-                            {{ size }}
-                          </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Color</mat-label>
-                        <mat-select>
-                          <mat-option *ngFor="let color of cards[i+1].colors" [value]="color">
-                            {{ color }}
-                          </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <div class="addToCartAndPrice">
-                        <button mat-button>ADD TO CART</button>
-                        <span class="price">${{ cards[i+1].price }}</span>
-                    </div>
-                    <div class="categories">
-                        <button mat-button *ngFor="let category of cards[i+1].categories" [value] = "category">
-                            {{ category }}
-                        </button>
-                    </div>
-                </mat-card-actions>
-            </mat-card>
-        </span> 
-        <!-- The third card in each row -->
-        <span class="card" *ngIf="i + 2 < cards.length">
-            <mat-card class="example-card">
-                <mat-card-header>
-                    <mat-card-title>{{ cards[i+2].title }}</mat-card-title>
-                    <mat-card-subtitle>{{ cards[i+2].subtitle }}</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="{{ images[i+2] }}" alt="Photo of a Shiba Inu">
-                <mat-card-content></mat-card-content>
-                <mat-card-actions>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Size</mat-label>
-                        <mat-select>
-                          <mat-option *ngFor="let size of cards[i+2].sizes" [value]="size">
-                            {{ size }}
-                          </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Color</mat-label>
-                        <mat-select>
-                          <mat-option *ngFor="let color of cards[i+2].colors" [value]="color">
-                            {{ color }}
-                          </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <div class="addToCartAndPrice">
-                        <button mat-button>ADD TO CART</button>
-                        <span class="price">${{ cards[i+2].price }}</span>
-                    </div>
-                    <div class="categories">
-                        <button mat-button *ngFor="let category of cards[i+2].categories" [value] = "category">
-                            {{ category }}
-                        </button>
-                    </div>
-                </mat-card-actions>
-            </mat-card>
-        </span> 
+        </div>
     </div>
 </div>
 
