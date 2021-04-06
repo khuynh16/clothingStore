@@ -19,9 +19,15 @@
     flex: 1;
 }
 
+.optionsButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .clothingNavButtons {
     flex: 2;
-    /* justify-content: space-evenly; */
+    display: flex;
+    justify-content: center;
 }
 
 button {

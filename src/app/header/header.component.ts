@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  displayIfOnAuthPage: boolean;
+  onAuthPage: boolean;
   currentRoute: string;
 
   constructor(private route: ActivatedRoute) {
@@ -16,10 +16,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.currentRoute);
-    this.displayIfOnAuthPage = false;
+    this.onAuthPage = false;
     if (this.currentRoute === 'sign-in' || this.currentRoute === 'sign-up') {
-      this.displayIfOnAuthPage = true;
+      this.onAuthPage = true;
     }
   }
-
 }
