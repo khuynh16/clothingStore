@@ -22,7 +22,9 @@ form {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 10px;
-    box-shadow: inset 2000px 2000px 2000px rgb(231 231 231 / 50%);
+    box-shadow: inset 2000px 2000px 2000px rgb(231 231 231 / 50%),
+    0 1px 1px rgb(0 0 0 / 80%), 
+    inset 1px 2px 0 hsl(0deg 0% 100% / 80%);
 
     /* background: linear-gradient(to top right, rgba(255,255,255,0.7), rgba(255,255,255,0.3)); */
     /* backdrop-filter: blur(2rem); */
