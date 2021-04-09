@@ -51,7 +51,6 @@
 }
 
 .subTotalAndCheckout button {
-    /* background-color: #0B132B; */
     background: rgb(72,69,136);
     background: linear-gradient(180deg, rgba(72,69,136,1) 0%, rgba(11,19,43,1) 100%);
 }
@@ -75,5 +74,10 @@ hr {
     display: flex;
     width: 90%;
     justify-content: space-between;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
 }
 
