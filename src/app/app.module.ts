@@ -26,6 +26,7 @@ import { CartListComponent } from './components/cart/cart-list/cart-list.compone
 import { CartPricingComponent } from './components/cart/cart-pricing/cart-pricing.component';
 import { CheckoutComponent } from './components/cart/checkout/checkout.component';
 import { CustomerCheckoutInfoComponent } from './components/cart/customer-checkout-info/customer-checkout-info.component';
+import { ShippingInfoComponent } from './components/cart/customer-checkout-info/shipping-info/shipping-info.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CustomerCheckoutInfoComponent } from './components/cart/customer-checko
     CartPricingComponent,
     CheckoutComponent,
     CustomerCheckoutInfoComponent,
+    ShippingInfoComponent,
   ],
   imports: [
     BrowserModule,
