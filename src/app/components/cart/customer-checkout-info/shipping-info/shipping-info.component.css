@@ -48,10 +48,16 @@
 
 .shippingInformation section {
     padding: 10px 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .customerName > *:last-child {
     padding-left: 20px;
+}
+
+.customerName > * {
+    width: 50%;
 }
 
 .title {
@@ -70,4 +76,8 @@
 
 .cityStateZip > *:not(:first-child) {
     padding-left: 20px;
+}
+
+.cityStateZip > * {
+    width: 33.3%;
 }
