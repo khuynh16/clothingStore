@@ -30,7 +30,11 @@
                         <span class="price">${{ item.price }}</span>
                     </div>
                     <div class="categories">
-                        <button mat-button *ngFor="let category of item.categories" [value] = "category">
+                        <button 
+                            mat-button 
+                            *ngFor="let category of item.categories" 
+                            [value] = "category" 
+                            routerLink="/categories/{{ category }}">
                             {{ category }}
                         </button>
                     </div>
