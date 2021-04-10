@@ -34,6 +34,9 @@ export class DisplayClothingTemplateComponent implements OnInit {
       case 'shirts':
         this.clothingDB = this.clothingDB.filter(clothing => clothing.categories.includes('shirts'));
         break;
+      case 'socks':
+        this.clothingDB = this.clothingDB.filter(clothing => clothing.categories.includes('socks'));
+        break;
     }
   }
 
