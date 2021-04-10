@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { CLOTHING_DATABASE } from '../../../mock-clothing';
+import { CLOTHING_DATABASE } from '../../mock-clothing';
 
 @Component({
   selector: 'app-display-clothing-template',
@@ -13,7 +13,15 @@ export class DisplayClothingTemplateComponent implements OnInit {
   currentRoute;
 
   constructor(private route: ActivatedRoute) {
-    this.currentRoute = route.snapshot.url[1].path;
+    // assign current route to current path, e.g. 'home' for /home and 'men'
+    // for /categories/men.
+    // without if else check, program will throw an error
+    if (this.route.snapshot.url.length === 1) {
+      this.currentRoute = route.snapshot.url[0].path;
+    }
+    else if (this.route.snapshot.url.length === 2) {
+      this.currentRoute = route.snapshot.url[1].path;
+    }
   }
 
   ngOnInit(): void {
@@ -36,6 +44,8 @@ export class DisplayClothingTemplateComponent implements OnInit {
       case 'socks':
         this.clothingDB = this.clothingDB.filter(clothing => clothing.categories.includes('socks'));
         break;
+      default:
+        this.clothingDB = this.clothingDB;
     }
   }
 

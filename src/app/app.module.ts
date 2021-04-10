@@ -34,7 +34,7 @@ import { HatsComponent } from './components/categories/hats/hats.component';
 import { PantsComponent } from './components/categories/pants/pants.component';
 import { ShirtsComponent } from './components/categories/shirts/shirts.component';
 import { SocksComponent } from './components/categories/socks/socks.component';
-import { DisplayClothingTemplateComponent } from './components/categories/display-clothing-template/display-clothing-template.component';
+import { DisplayClothingTemplateComponent } from './components/display-clothing-template/display-clothing-template.component';
 
 @NgModule({
   declarations: [

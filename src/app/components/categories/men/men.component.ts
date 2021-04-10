@@ -14,7 +14,6 @@ export class MenComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.clothingDB = this.clothingDB.filter(clothing => clothing.categories.includes('men'));
   }
 
 }

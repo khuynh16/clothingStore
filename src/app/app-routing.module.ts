@@ -10,6 +10,7 @@ import { PantsComponent } from './components/categories/pants/pants.component';
 import { ShirtsComponent } from './components/categories/shirts/shirts.component';
 import { SocksComponent } from './components/categories/socks/socks.component';
 import { WomenComponent } from './components/categories/women/women.component';
+import { DisplayClothingTemplateComponent } from './components/display-clothing-template/display-clothing-template.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes = [

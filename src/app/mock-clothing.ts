@@ -1,3 +1,7 @@
+// male shirt from: http://clipart-library.com/clipart/5cRXqAxEi.htm
+// female shirt from: https://wdrfree.com/stock-vector/female-t-shirt
+// hat from: https://grandcast.com.hk/headwear-templates
+
 export const CLOTHING_DATABASE = [
     {
       'title': 'Men\'s T-shirt',
