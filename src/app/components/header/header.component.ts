@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.currentRoute);
     this.onAuthPage = false;
     if (this.currentRoute === 'sign-in' || this.currentRoute === 'sign-up') {
       this.onAuthPage = true;

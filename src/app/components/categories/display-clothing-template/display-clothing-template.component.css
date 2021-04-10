@@ -1,6 +1,8 @@
 :host {
     background-image: linear-gradient( 135deg, #7CFFC4 10%, #6ABEA7 100%);
     display: block;
+    min-height: 100%;
+    height: auto;
 }
 
 .wrapper {

@@ -28,6 +28,13 @@ import { CheckoutComponent } from './components/cart/checkout/checkout.component
 import { CustomerCheckoutInfoComponent } from './components/cart/customer-checkout-info/customer-checkout-info.component';
 import { ShippingInfoComponent } from './components/cart/customer-checkout-info/shipping-info/shipping-info.component';
 import { PaymentInfoComponent } from './components/cart/customer-checkout-info/payment-info/payment-info.component';
+import { WomenComponent } from './components/categories/women/women.component';
+import { MenComponent } from './components/categories/men/men.component';
+import { HatsComponent } from './components/categories/hats/hats.component';
+import { PantsComponent } from './components/categories/pants/pants.component';
+import { ShirtsComponent } from './components/categories/shirts/shirts.component';
+import { SocksComponent } from './components/categories/socks/socks.component';
+import { DisplayClothingTemplateComponent } from './components/categories/display-clothing-template/display-clothing-template.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +51,13 @@ import { PaymentInfoComponent } from './components/cart/customer-checkout-info/p
     CustomerCheckoutInfoComponent,
     ShippingInfoComponent,
     PaymentInfoComponent,
+    WomenComponent,
+    MenComponent,
+    HatsComponent,
+    PantsComponent,
+    ShirtsComponent,
+    SocksComponent,
+    DisplayClothingTemplateComponent,
   ],
   imports: [
     BrowserModule,
