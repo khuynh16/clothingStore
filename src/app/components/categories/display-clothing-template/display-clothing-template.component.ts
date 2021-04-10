@@ -17,7 +17,6 @@ export class DisplayClothingTemplateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.currentRoute);
     switch (this.currentRoute) {
       case 'men':
         this.clothingDB = this.clothingDB.filter(clothing => clothing.categories.includes('men'));
