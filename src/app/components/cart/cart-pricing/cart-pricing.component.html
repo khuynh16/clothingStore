@@ -1,0 +1,33 @@
+<div class="title">
+    <p>Cart Pricing</p>
+</div>
+<div class="subTotalAndCheckout">
+    <div class="subtotal" *ngIf ="isCartRoute">
+        <p>Subtotal (5 items):</p>
+        <span class="cost">$59.99</span>
+    </div>
+    <div class="checkoutDetails" *ngIf="isCheckoutRoute">
+        <div class="row1">
+            <p>Items:</p>
+            <p>$59.99</p>
+        </div>
+        <div class="row2">
+            <p>Shipping and handling:</p>
+            <p>$3.00</p>
+        </div>
+        <div class="row3">
+            <p>Total before tax:</p>
+            <p>$62.99</p>
+        </div>
+        <div class="row4">
+            <p>Estimated tax to be collected:</p>
+            <p>$3.00</p>
+        </div>
+        <div class="row5">
+            <p>Order total:</p>
+            <p>$65.99</p>
+        </div>
+    </div>
+    <hr>
+    <button mat-raised-button routerLink="/checkout">{{ toCheckoutOrPlaceOrder }}</button>
+</div>

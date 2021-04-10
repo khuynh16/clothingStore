@@ -1,0 +1,75 @@
+:host {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.subTotalAndCheckout {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 90%;
+    border: 1px solid black;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.subTotalAndCheckout button {
+    background: rgb(72,69,136);
+    background: linear-gradient(180deg, rgba(72,69,136,1) 0%, rgba(11,19,43,1) 100%);
+}
+
+:host ::ng-deep .subTotalAndCheckout button .mat-button-wrapper {
+    color: #9ffff5;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+    width: 90%;
+}
+
+.cost {
+    font-weight: bold;
+}
+
+.subtotal {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.checkoutDetails {
+    width: 90%;
+    font-size: 14px;
+}
+
+.checkoutDetails div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkoutDetails div:not(:last-child) {
+    padding-bottom: 5px;
+}
+
+.checkoutDetails div:last-child {
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+}

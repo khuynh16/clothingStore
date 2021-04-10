@@ -23,6 +23,9 @@ import { SignInComponent } from './components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { AuthFormComponent } from './components/auth/auth-form/auth-form.component';
 import { CartListComponent } from './components/cart/cart-list/cart-list.component';
+import { CartPricingComponent } from './components/cart/cart-pricing/cart-pricing.component';
+import { CheckoutComponent } from './components/cart/checkout/checkout.component';
+import { CustomerCheckoutInfoComponent } from './components/cart/customer-checkout-info/customer-checkout-info.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { CartListComponent } from './components/cart/cart-list/cart-list.compone
     SignUpComponent,
     AuthFormComponent,
     CartListComponent,
+    CartPricingComponent,
+    CheckoutComponent,
+    CustomerCheckoutInfoComponent,
   ],
   imports: [
     BrowserModule,

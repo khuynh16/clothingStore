@@ -1,0 +1,91 @@
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black;
+}
+
+.test {
+    padding-left: 10px;
+}
+
+.heading {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.heading h1 {
+    border-bottom: 2px solid black;
+}
+
+.heading .mat-icon {
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.heading .mat-icon:first-child {
+    margin-right: 20px;
+}
+
+.heading .mat-icon:last-child {
+    margin-left: 20px;
+}
+
+.mat-icon {
+    vertical-align: middle;
+}
+
+.arrow img {
+    width: 50%;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+}
+
+.shippingInformation {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+
+.shippingInformation section {
+    padding: 10px 0;
+}
+
+.customerName > *:last-child {
+    padding-left: 20px;
+}
+
+.title {
+    /* padding-bottom: 30px; */
+    text-align: center;
+}
+
+/* :host ::ng-deep .emailSection .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    width: 209%;
+} */
+
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+/* :host ::ng-deep .shippingAddressSection .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    width: 71.6%;
+} */
+
+.street {
+    display: flex;
+    flex-direction: column;
+}
+
+.cityStateZip > *:not(:first-child) {
+    padding-left: 20px;
+}
