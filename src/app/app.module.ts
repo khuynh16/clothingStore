@@ -35,6 +35,7 @@ import { PantsComponent } from './components/categories/pants/pants.component';
 import { ShirtsComponent } from './components/categories/shirts/shirts.component';
 import { SocksComponent } from './components/categories/socks/socks.component';
 import { DisplayClothingTemplateComponent } from './components/display-clothing-template/display-clothing-template.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { DisplayClothingTemplateComponent } from './components/display-clothing-
     ShirtsComponent,
     SocksComponent,
     DisplayClothingTemplateComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
