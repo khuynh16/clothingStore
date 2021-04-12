@@ -16,6 +16,6 @@
         <button mat-button routerLinkActive="activeRoute">Contact Us</button>
         <button mat-button routerLink="/sign-in" routerLinkActive="activeRoute" *ngIf="!onAuthPage">Sign In</button>
         <button mat-button routerLinkActive="activeRoute">Settings</button>
-        <button mat-button routerLink="/cart" routerLinkActive="activeRoute"><mat-icon>shopping_cart</mat-icon>Your Cart</button>
+        <button mat-button routerLink="/cart" [class.activeRoute]="shoppingCartOrCheckout"><mat-icon>shopping_cart</mat-icon>Your Cart</button>
     </div>
 </mat-toolbar>
