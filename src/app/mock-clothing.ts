@@ -84,4 +84,13 @@ export const CLOTHING_DATABASE = [
       'categories': ['women', 'shirts'],
       'image': '../../assets/images/female shirt template.png'
     },
+    {
+        'title': 'example title',
+        'subtitle': 'subtitle here',
+        'sizes': ['small', 'medium', 'large'],
+        'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
+        'price': 19.99,
+        'categories': ['women', 'shirts'],
+        'image': '../../assets/images/female shirt template.png'
+      },
 ];

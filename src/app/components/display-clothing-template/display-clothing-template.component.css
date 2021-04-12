@@ -1,8 +1,15 @@
 :host {
     background-image: linear-gradient( 135deg, #7CFFC4 10%, #6ABEA7 100%);
     display: block;
-    min-height: 100%;
     height: auto;
+    min-height: calc(100% - 192px);
+    /* Purpose of min-height is to allow footer to set on the exact bottom
+       of page when no item visible. 
+       -192px comes from 64 pixels for header and 128px for footer. -192px from 100%
+       allows footer to rest exactly on bottom of page with no unnecessary scrolling.
+       Another way to conduct this min-height:
+            min-height: 76.6%; 
+    */
 }
 
 .wrapper {
