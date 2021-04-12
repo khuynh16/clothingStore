@@ -5,17 +5,17 @@
         </button>
     </div>
     <div class="clothingNavButtons">
-        <button mat-button routerLink="/categories/men">Men</button>
-        <button mat-button routerLink="/categories/women">Women</button>
-        <button mat-button routerLink="/categories/hats">Hats</button>
-        <button mat-button routerLink="/categories/pants">Pants</button>
-        <button mat-button routerLink="/categories/shirts">Shirts</button>
-        <button mat-button routerLink="/categories/socks">Socks</button>
+        <button mat-button routerLink="/categories/men" routerLinkActive="activeRoute">Men</button>
+        <button mat-button routerLink="/categories/women" routerLinkActive="activeRoute">Women</button>
+        <button mat-button routerLink="/categories/hats" routerLinkActive="activeRoute">Hats</button>
+        <button mat-button routerLink="/categories/pants" routerLinkActive="activeRoute">Pants</button>
+        <button mat-button routerLink="/categories/shirts" routerLinkActive="activeRoute">Shirts</button>
+        <button mat-button routerLink="/categories/socks" routerLinkActive="activeRoute">Socks</button>
     </div>
     <div class="optionsButtons">
-        <button mat-button>Contact Us</button>
-        <button mat-button routerLink="/sign-in" *ngIf="!onAuthPage">Sign In</button>
-        <button mat-button>Settings</button>
-        <button mat-button routerLink="/cart"><mat-icon>shopping_cart</mat-icon>Your Cart</button>
+        <button mat-button routerLinkActive="activeRoute">Contact Us</button>
+        <button mat-button routerLink="/sign-in" routerLinkActive="activeRoute" *ngIf="!onAuthPage">Sign In</button>
+        <button mat-button routerLinkActive="activeRoute">Settings</button>
+        <button mat-button routerLink="/cart" routerLinkActive="activeRoute"><mat-icon>shopping_cart</mat-icon>Your Cart</button>
     </div>
 </mat-toolbar>

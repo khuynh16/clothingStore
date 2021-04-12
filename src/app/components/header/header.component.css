@@ -30,18 +30,24 @@
     justify-content: center;
 }
 
+.clothingNavButtons .activeRoute,
+.optionsButtons .activeRoute {
+    border: 1px solid #9FFFF5;
+    background-color: #1C2541;
+}
+
 button {
     border: 1px solid #5E6973;
     background-color: transparent;
     font-size: 16px;
-    height: 90%;
+    height: 80%;
     color: #9FFFF5;
     outline: none;
     cursor: pointer;
+    margin: 0 3px;
 }
 
 button:hover {
-    
     border-color: #9FFFF5;
 }
 
