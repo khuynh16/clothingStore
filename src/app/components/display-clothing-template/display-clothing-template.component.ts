@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { CartService } from 'src/app/services/cart.service';
 import { CLOTHING_DATABASE } from '../../mock-clothing';
 
 @Component({
@@ -12,7 +13,7 @@ export class DisplayClothingTemplateComponent implements OnInit {
   clothingDB = CLOTHING_DATABASE;
   currentRoute;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, public cartService: CartService) {
     // assign current route to current path, e.g. 'home' for /home and 'men'
     // for /categories/men.
     // without if else check, program will throw an error
@@ -49,4 +50,13 @@ export class DisplayClothingTemplateComponent implements OnInit {
     }
   }
 
+  addToCart(title, subtitle, imageUrl, price, size, color) {
+    console.log(title);
+    console.log(subtitle);
+    console.log(imageUrl);
+    console.log(price);
+    console.log('hello: ' + size.value);
+    console.log(color.value);
+    this.cartService.addToCart(title, subtitle, imageUrl, price, size.value, color.value);
+  }
 }
