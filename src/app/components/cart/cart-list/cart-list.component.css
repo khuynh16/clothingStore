@@ -1,5 +1,3 @@
-
-
 .cartPricing {
     border-left: 1px solid black;
     border-radius: 0 20px 20px 0;
@@ -11,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    height: 200px;
+    height: 220px;
 }
 
 .cartItem img {
@@ -65,6 +63,14 @@
 .title, 
 .priceHeading {
     font-size: 20px;
+}
+
+.subtitle {
+    padding: 10px 0;
+}
+
+.color {
+    padding-bottom: 15px;
 }
 
 .priceHeading {

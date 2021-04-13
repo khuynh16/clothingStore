@@ -5,8 +5,9 @@
         <div class="itemDetails">
             <div class="itemDescription">
                 <p class="title">{{ cartItem.title }}</p>
+                <p class="subtitle">{{ cartItem.subtitle }}</p>
                 <p>Size: {{ cartItem.size }} </p>
-                <p>Color: {{ cartItem.color }} </p>
+                <p class="color">Color: {{ cartItem.color }} </p>
             </div>
             <div class="actionButtons">
                 <mat-form-field appearance="fill">
@@ -26,7 +27,11 @@
             <p>{{ cartItem.price }}</p>
         </div>
         <div class="removeItem">
-            <button mat-raised-button>Remove</button>
+            <button 
+            mat-raised-button 
+            (click)="removeItemFromCart(cartItem.itemId)">
+            Remove
+        </button>
         </div>
     </div>
 </div>

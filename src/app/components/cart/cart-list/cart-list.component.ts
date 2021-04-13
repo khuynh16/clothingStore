@@ -18,4 +18,9 @@ export class CartListComponent implements OnInit {
     console.log(this.cartItems);
   }
 
+  removeItemFromCart(itemId) {
+    console.log('removed');
+    this.cartService.removeFromCart(itemId);
+  }
+
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart-pricing',
@@ -12,7 +13,10 @@ export class CartPricingComponent implements OnInit {
   isCheckoutRoute = false;
   toCheckoutOrPlaceOrder: string;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  currentNumCartItems: number;
+  currentSubtotal: number;
+
+  constructor(private route: ActivatedRoute, private router: Router, public cartService: CartService) {
     this.currentRoute = route.snapshot.url[0].path;
   }
 
@@ -26,6 +30,13 @@ export class CartPricingComponent implements OnInit {
       this.isCartRoute = false;
       this.toCheckoutOrPlaceOrder = "Place Order";
     }
+
+    // determine number of cart items for subtotal text
+    this.currentNumCartItems = this.cartService.getNumOfCartItems();
+    
+    // determine subtotal of cart
+    this.currentSubtotal = this.cartService.getCurrentCartSubtotal();
+
   }
 
 }
