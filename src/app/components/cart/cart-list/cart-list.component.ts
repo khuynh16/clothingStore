@@ -15,6 +15,7 @@ export class CartListComponent implements OnInit {
 
   ngOnInit(): void {
     this.cartItems = this.cartService.getCart();
+    console.log(this.cartItems);
   }
 
 }

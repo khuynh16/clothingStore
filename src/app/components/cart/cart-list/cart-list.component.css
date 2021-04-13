@@ -29,6 +29,10 @@
     border-top: none;
 }
 
+.cartItem:only-child {
+    border-bottom: 1px solid black;
+}
+
 .itemDetails {
     display: flex;
     flex-direction: column;
