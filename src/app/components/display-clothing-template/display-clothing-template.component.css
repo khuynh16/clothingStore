@@ -12,6 +12,11 @@
     */
 }
 
+.cards {
+    display: flex; 
+    justify-content: center;
+}
+
 .wrapper {
     display:  grid;
     grid-template-columns: repeat(3, 1fr);
@@ -19,6 +24,7 @@
     grid-auto-rows: 1fr;
     justify-items: center;
     align-items: center;
+    max-width: 1200px;
 }
 
 .wrapper > .card {
