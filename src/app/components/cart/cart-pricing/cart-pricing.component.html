@@ -3,7 +3,7 @@
 </div>
 <div class="subTotalAndCheckout">
     <div class="subtotal" *ngIf ="isCartRoute">
-        <p>Subtotal ({{ currentNumCartItems}} items):</p>
+        <p>Subtotal ({{ currentNumCartItems }} items):</p>
         <span class="cost">${{ currentSubtotal | number:'1.2-2' }}</span>
     </div>
     <div class="checkoutDetails" *ngIf="isCheckoutRoute">

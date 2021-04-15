@@ -51,12 +51,6 @@ export class DisplayClothingTemplateComponent implements OnInit {
   }
 
   addToCart(title, subtitle, imageUrl, price, size, color) {
-    console.log(title);
-    console.log(subtitle);
-    console.log(imageUrl);
-    console.log(price);
-    console.log('hello: ' + size.value);
-    console.log(color.value);
     this.cartService.addToCart(title, subtitle, imageUrl, price, size.value, color.value);
   }
 }

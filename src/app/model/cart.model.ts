@@ -1,3 +1,10 @@
 export interface Cart {
-    id: string;
+    id: String,
+    title : string,
+    subtitle: string
+    imageUrl: string,
+    price: number,
+    size: string,
+    color: string
+
 }
