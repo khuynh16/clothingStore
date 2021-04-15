@@ -13,6 +13,7 @@ export class CartPricingComponent implements OnInit {
   isCartRoute = false;
   isCheckoutRoute = false;
   toCheckoutOrPlaceOrder: string;
+  noItemsInCart = true;
 
   currentNumCartItems: number;
   currentSubtotal: number;
@@ -34,15 +35,10 @@ export class CartPricingComponent implements OnInit {
       this.toCheckoutOrPlaceOrder = "Place Order";
     }
 
-    // // determine number of cart items for subtotal text
-    // this.currentNumCartItems = this.cartService.getNumOfCartItems();
-    
-    // // determine subtotal of cart
-    // this.currentSubtotal = this.cartService.getCurrentCartSubtotal();
-
     this.subscription = this.cartService.getCart().subscribe(cartDetails => {
       this.currentNumCartItems = cartDetails.numItems;
       this.currentSubtotal = cartDetails.subtotal;
+      this.noItemsInCart = this.currentNumCartItems > 0 ? false : true;
     });
 
   }

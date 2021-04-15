@@ -28,6 +28,14 @@
     background: linear-gradient(180deg, rgba(72,69,136,1) 0%, rgba(11,19,43,1) 100%);
 }
 
+.subTotalAndCheckout button:disabled {
+    background: #b8b9b8;
+}
+
+:host ::ng-deep .subTotalAndCheckout button:disabled .mat-button-wrapper {
+    color: dimgray;
+}
+
 :host ::ng-deep .subTotalAndCheckout button .mat-button-wrapper {
     color: #9ffff5;
 }
@@ -73,3 +81,4 @@ hr {
     font-weight: bold;
     font-size: 20px;
 }
+
