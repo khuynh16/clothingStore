@@ -61,11 +61,11 @@
     padding: 0 5px;
 }
 
-:host ::ng-deep mat-card-actions > *:nth-child(3) {
+:host ::ng-deep mat-card-actions > *:nth-child(4) {
     padding-bottom: 10px;
 }
 
-:host ::ng-deep mat-card-actions > *:nth-child(4) {
+:host ::ng-deep mat-card-actions > *:nth-child(5) {
     padding-top: 10px;
     padding-bottom: 10px;
 }
