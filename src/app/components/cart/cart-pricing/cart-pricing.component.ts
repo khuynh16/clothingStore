@@ -14,6 +14,8 @@ export class CartPricingComponent implements OnInit, OnDestroy {
   isCheckoutRoute = false;
   toCheckoutOrPlaceOrder: string;
   noItemsInCart = true;
+  shippingAndHandlingFee = 3.00;
+  tax = 3.00;
 
   currentNumCartItems: number;
   currentSubtotal: number;

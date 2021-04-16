@@ -9,23 +9,23 @@
     <div class="checkoutDetails" *ngIf="isCheckoutRoute">
         <div class="row1">
             <p>Items:</p>
-            <p>$59.99</p>
+            <p>${{ currentSubtotal | number:'1.2-2' }}</p>
         </div>
         <div class="row2">
             <p>Shipping and handling:</p>
-            <p>$3.00</p>
+            <p>${{ shippingAndHandlingFee | number:'1.2-2' }}</p>
         </div>
         <div class="row3">
             <p>Total before tax:</p>
-            <p>$62.99</p>
+            <p>$ {{ currentSubtotal + shippingAndHandlingFee | number:'1.2-2' }}</p>
         </div>
         <div class="row4">
             <p>Estimated tax to be collected:</p>
-            <p>$3.00</p>
+            <p>${{ tax | number:'1.2-2' }}</p>
         </div>
         <div class="row5">
             <p>Order total:</p>
-            <p>$65.99</p>
+            <p>${{ currentSubtotal + shippingAndHandlingFee + tax | number:'1.2-2' }}</p>
         </div>
     </div>
     <hr>
