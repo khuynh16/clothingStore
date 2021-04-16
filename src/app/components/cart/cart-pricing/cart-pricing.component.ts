@@ -36,7 +36,6 @@ export class CartPricingComponent implements OnInit, OnDestroy {
     }
 
     this.subscription = this.cartService.getCart().subscribe(cartDetails => {
-      console.log("HERE");
       this.currentNumCartItems = cartDetails.numItems;
       this.currentSubtotal = cartDetails.subtotal;
       this.noItemsInCart = this.currentNumCartItems > 0 ? false : true;

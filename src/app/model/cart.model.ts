@@ -5,6 +5,7 @@ export interface Cart {
     imageUrl: string,
     price: number,
     size: string,
-    color: string
+    color: string,
+    quantity: number
 
 }

@@ -46,7 +46,6 @@ export class CartService {
   removeFromCart(itemId, price, quantity) {
     this.cartItems = this.cartItems.filter(cartItem => cartItem.itemId !== itemId);
     this.numItemsInCart = this.numItemsInCart - quantity;
-
     this.subtotal = this.subtotal - (price * quantity);
 
     this.cartItemsSubject.next({

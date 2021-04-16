@@ -25,7 +25,6 @@ export class CartListComponent implements OnInit, OnDestroy {
       this.cartItems.forEach(item => {
         this.currentQuantityForItems[item.itemId] = item.quantity;
       });
-      console.log(this.currentQuantityForItems);
     });
   }
 
@@ -34,8 +33,6 @@ export class CartListComponent implements OnInit, OnDestroy {
   }
 
   quantityChange(event, itemId, price) {
-    console.log('change');
-    console.log(event.value);
     this.cartService.adjustNumItemsInCart(event.value, this.currentQuantityForItems[itemId], price);
   }
 
