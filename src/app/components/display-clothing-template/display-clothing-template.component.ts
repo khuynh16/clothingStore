@@ -52,7 +52,7 @@ export class DisplayClothingTemplateComponent implements OnInit {
     }
   }
 
-  addToCart(title, subtitle, imageUrl, price, size, color) {
-    this.cartService.addToCart(title, subtitle, imageUrl, price, size.value, color.value);
+  addToCart(title, subtitle, imageUrl, price, size, color, quantity) {
+    this.cartService.addToCart(title, subtitle, imageUrl, price, size.value, color.value, quantity);
   }
 }

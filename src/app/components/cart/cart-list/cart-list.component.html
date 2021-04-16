@@ -12,7 +12,7 @@
             <div class="actionButtons">
                 <mat-form-field appearance="fill">
                     <mat-label>Quantity</mat-label>
-                    <mat-select>
+                    <mat-select [(value)]="cartItem.quantity" (selectionChange)="quantityChange($event, cartItem.itemId, cartItem.price)">
                         <mat-option *ngFor="let quantity of quantities" [value]="quantity">
                         {{ quantity }}
                         </mat-option>
@@ -24,12 +24,12 @@
     <div class="right">
         <div class="priceInfo">
             <p class="priceHeading">Price</p>
-            <p>{{ cartItem.price }}</p>
+            <p class="priceDetails">{{ cartItem.quantity }} x ${{ cartItem.price }}</p>
         </div>
         <div class="removeItem">
             <button 
             mat-raised-button 
-            (click)="removeItemFromCart(cartItem.itemId, cartItem.price)">
+            (click)="removeItemFromCart(cartItem.itemId, cartItem.price, cartItem.quantity)">
             Remove
         </button>
         </div>

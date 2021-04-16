@@ -13,16 +13,30 @@ export class CartListComponent implements OnInit, OnDestroy {
   color = 'primary';
   subscription: Subscription;
 
+  currentQuantityForItems = {};
+
   constructor(public cartService: CartService) { }
 
   ngOnInit(): void {
     this.subscription = this.cartService.getCart().subscribe(cartDetails => {
       this.cartItems = cartDetails.cart;
+
+      // update object with key value pairs item id (for each added item(s)) and 
+      this.cartItems.forEach(item => {
+        this.currentQuantityForItems[item.itemId] = item.quantity;
+      });
+      console.log(this.currentQuantityForItems);
     });
   }
 
-  removeItemFromCart(itemId, price) {
-    this.cartService.removeFromCart(itemId, price);
+  removeItemFromCart(itemId, price, quantity) {
+    this.cartService.removeFromCart(itemId, price, quantity);
+  }
+
+  quantityChange(event, itemId, price) {
+    console.log('change');
+    console.log(event.value);
+    this.cartService.adjustNumItemsInCart(event.value, this.currentQuantityForItems[itemId], price);
   }
 
   ngOnDestroy() {

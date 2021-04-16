@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CartService } from 'src/app/services/cart.service';
@@ -8,7 +8,7 @@ import { CartService } from 'src/app/services/cart.service';
   templateUrl: './cart-pricing.component.html',
   styleUrls: ['./cart-pricing.component.css']
 })
-export class CartPricingComponent implements OnInit {
+export class CartPricingComponent implements OnInit, OnDestroy {
   currentRoute: string;
   isCartRoute = false;
   isCheckoutRoute = false;
@@ -36,11 +36,15 @@ export class CartPricingComponent implements OnInit {
     }
 
     this.subscription = this.cartService.getCart().subscribe(cartDetails => {
+      console.log("HERE");
       this.currentNumCartItems = cartDetails.numItems;
       this.currentSubtotal = cartDetails.subtotal;
       this.noItemsInCart = this.currentNumCartItems > 0 ? false : true;
     });
+  }
 
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }

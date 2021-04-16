@@ -7,9 +7,8 @@ import { Cart } from '../model/cart.model';
   providedIn: 'root'
 })
 export class CartService {
-  cart: Cart;
   cartItems = [];
-  count: number = 0;
+  numItemsInCart: number = 0;
   itemId: number = 0;
   subtotal: number = 0;
 
@@ -21,9 +20,10 @@ export class CartService {
     return this.cartItemsSubject.asObservable();
   }
 
-  addToCart(title, subtitle, imageUrl, price, size, color) {
-    this.count++;
+  addToCart(title, subtitle, imageUrl, price, size, color, quantity) {
     this.itemId++;
+    this.numItemsInCart = this.numItemsInCart + quantity;
+    this.subtotal = this.subtotal + (price * quantity);
 
     this.cartItems.push({
       itemId: this.itemId,
@@ -32,35 +32,37 @@ export class CartService {
       imageUrl: imageUrl,
       price: price,
       size: size,
-      color: color
+      color: color,
+      quantity: quantity
     });
-
-    this.subtotal = this.subtotal + price;
 
     this.cartItemsSubject.next({
       cart: this.cartItems,
-      numItems: this.count,
+      numItems: this.numItemsInCart,
       subtotal: this.subtotal
     });
   }
 
-  getNumOfCartItems() {
-    return this.count;
-  }
-
-  getCurrentCartSubtotal() {
-    return this.subtotal;
-  }
-
-  removeFromCart(itemId, price) {
+  removeFromCart(itemId, price, quantity) {
     this.cartItems = this.cartItems.filter(cartItem => cartItem.itemId !== itemId);
-    this.count--;
+    this.numItemsInCart = this.numItemsInCart - quantity;
 
-    this.subtotal = this.subtotal - price;
+    this.subtotal = this.subtotal - (price * quantity);
 
     this.cartItemsSubject.next({
       cart: this.cartItems,
-      numItems: this.count,
+      numItems: this.numItemsInCart,
+      subtotal: this.subtotal
+    });
+  }
+
+  adjustNumItemsInCart(newQuantityOfItems, currentQuantValue, price) {
+    this.numItemsInCart = this.numItemsInCart + (newQuantityOfItems - currentQuantValue);
+    this.subtotal = this.subtotal + (price * (newQuantityOfItems - currentQuantValue));
+
+    this.cartItemsSubject.next({
+      cart: this.cartItems,
+      numItems: this.numItemsInCart,
       subtotal: this.subtotal
     });
   }
