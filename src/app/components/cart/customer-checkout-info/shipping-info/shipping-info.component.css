@@ -6,6 +6,10 @@
     padding-left: 10px;
 }
 
+:host ::ng-deep .test ng-tns-c70-6 ng-star-inserted {
+    padding-left: 0px !important;
+}
+
 .heading {
     display: flex; 
     justify-content: center;
@@ -80,4 +84,9 @@
 
 .cityStateZip > * {
     width: 33.3%;
+}
+
+/* padding for the mat input labels after user enters text  */
+:host ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, .mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+    padding-top: 10px;
 }

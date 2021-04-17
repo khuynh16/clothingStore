@@ -17,6 +17,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { CartComponent } from './components/cart/cart.component';
 import { SignInComponent } from './components/auth/sign-in/sign-in.component';
@@ -34,7 +35,7 @@ import { HatsComponent } from './components/categories/hats/hats.component';
 import { PantsComponent } from './components/categories/pants/pants.component';
 import { ShirtsComponent } from './components/categories/shirts/shirts.component';
 import { SocksComponent } from './components/categories/socks/socks.component';
-import { DisplayClothingTemplateComponent } from './components/display-clothing-template/display-clothing-template.component';
+import { AddToCartModal, DisplayClothingTemplateComponent } from './components/display-clothing-template/display-clothing-template.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 
@@ -62,6 +63,7 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     DisplayClothingTemplateComponent,
     FooterComponent,
     ContactPageComponent,
+    AddToCartModal
   ],
   imports: [
     BrowserModule,
@@ -77,7 +79,8 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     FormsModule,
     ReactiveFormsModule,
     MatListModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

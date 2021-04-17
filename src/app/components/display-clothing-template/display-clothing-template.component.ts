@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { CartService } from 'src/app/services/cart.service';
 import { CLOTHING_DATABASE } from '../../mock-clothing';
@@ -15,7 +16,9 @@ export class DisplayClothingTemplateComponent implements OnInit {
 
   currentRoute;
 
-  constructor(private route: ActivatedRoute, public cartService: CartService) {
+  constructor(private route: ActivatedRoute, 
+    public cartService: CartService,
+    public dialog: MatDialog) {
     // assign current route to current path, e.g. 'home' for /home and 'men'
     // for /categories/men.
     // without if else check, program will throw an error
@@ -53,6 +56,39 @@ export class DisplayClothingTemplateComponent implements OnInit {
   }
 
   addToCart(title, subtitle, imageUrl, price, size, color, quantity) {
+
+    // modal popup description of order and direction to take afterwards (continue shopping
+    // or go to shopping cart)
+    const dialogRef = this.dialog.open(AddToCartModal, {
+      width: '400px',
+      data: {
+        title: title, 
+        subtitle: subtitle,
+        imageUrl: imageUrl,
+        price: price,
+        size: size,
+        color: color,
+        quantity: quantity
+      }
+    });
+
     this.cartService.addToCart(title, subtitle, imageUrl, price, size.value, color.value, quantity);
   }
+}
+
+// component for modal
+@Component({
+  selector: 'app-add-to-cart-modal',
+  templateUrl: './add-to-cart-modal.html',
+})
+export class AddToCartModal {
+
+  constructor(
+    public dialogRef: MatDialogRef<AddToCartModal>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }

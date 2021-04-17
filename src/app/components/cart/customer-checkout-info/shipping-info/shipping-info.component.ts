@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shipping-info.component.css']
 })
 export class ShippingInfoComponent implements OnInit {
+  states: string[] = ['A', 'B', 'C'];
 
   constructor() { }
 

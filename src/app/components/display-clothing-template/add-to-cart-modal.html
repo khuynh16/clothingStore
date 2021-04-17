@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Hi {{data.price}}</h1>
+<div mat-dialog-content>
+    <p>This is the mat dialog content section</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Continue Shopping</button>
+  <button mat-raised-button (click)="onNoClick()">To Shopping Cart</button>
+</div>
+
+<!-- <h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.price">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.price" cdkFocusInitial>Ok</button>
+</div> -->
