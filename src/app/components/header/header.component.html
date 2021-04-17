@@ -13,7 +13,7 @@
         <button mat-button routerLink="/categories/socks" routerLinkActive="activeRoute">Socks</button>
     </div>
     <div class="optionsButtons">
-        <button mat-button routerLinkActive="activeRoute">Contact Us</button>
+        <button mat-button routerLink="/contact-page" routerLinkActive="activeRoute">Contact Us</button>
         <button mat-button routerLink="/sign-in" routerLinkActive="activeRoute" *ngIf="!onAuthPage">Sign In</button>
         <button mat-button routerLinkActive="activeRoute">Settings</button>
         <button mat-button routerLink="/cart" [class.activeRoute]="shoppingCartOrCheckout"><mat-icon>shopping_cart</mat-icon>Your Cart</button>

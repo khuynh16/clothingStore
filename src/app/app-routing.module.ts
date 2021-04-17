@@ -10,6 +10,7 @@ import { PantsComponent } from './components/categories/pants/pants.component';
 import { ShirtsComponent } from './components/categories/shirts/shirts.component';
 import { SocksComponent } from './components/categories/socks/socks.component';
 import { WomenComponent } from './components/categories/women/women.component';
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'categories/pants', component: PantsComponent },
   { path: 'categories/shirts', component: ShirtsComponent },
   { path: 'categories/socks', component: SocksComponent },
+  { path: 'contact-page', component: ContactPageComponent },
 ];
 
 @NgModule({

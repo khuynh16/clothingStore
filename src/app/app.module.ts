@@ -36,6 +36,7 @@ import { ShirtsComponent } from './components/categories/shirts/shirts.component
 import { SocksComponent } from './components/categories/socks/socks.component';
 import { DisplayClothingTemplateComponent } from './components/display-clothing-template/display-clothing-template.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SocksComponent,
     DisplayClothingTemplateComponent,
     FooterComponent,
+    ContactPageComponent,
   ],
   imports: [
     BrowserModule,

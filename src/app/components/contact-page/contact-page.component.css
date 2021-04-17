@@ -1,0 +1,74 @@
+.container {
+    background-image: linear-gradient( 135deg, #7CFFC4 10%, #6ABEA7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: auto; */
+    min-height: calc(100% - 192px);
+    height: calc(100% - 192px);
+    /* Purpose of min-height is to allow footer to set on the exact bottom
+       of page when no item visible. 
+       -192px comes from 64 pixels for header and 128px for footer. -192px from 100%
+       allows footer to rest exactly on bottom of page with no unnecessary scrolling.
+       Another way to conduct this min-height:
+            min-height: 76.6%; 
+    */
+}
+
+form {
+    width: 70%;
+    max-width: 700px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+
+button {
+    border: 1px solid #1C2541;
+    background-color: whitesmoke;
+}
+
+.nameRow {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.nameRow mat-form-field {
+    width: 45%;
+}
+
+mat-form-field {
+    width: 90%;
+}
+
+.test {
+    padding-left: 10px;
+}
+
+.mat-icon { 
+    vertical-align: middle;
+}
+
+:host ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color: whitesmoke;
+    border-radius: 7px;
+    border: 1px solid #1C2541;
+}
+
+/* padding for the mat input labels after user enters text  */
+:host ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, .mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+    padding-top: 10px;
+}
+
+textarea {
+    max-height: 250px;
+    min-height: 40px;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
