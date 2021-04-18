@@ -35,3 +35,8 @@
         </div>
     </div>
 </div>
+<!-- put here ngIf = emptyCart and display some text like uh oh and routing to front page -->
+<div class="emptyCartDisplayMessage" *ngIf="cartItems.length === 0">
+    <p>Uh oh, you have no items in your cart.</p>
+    <p>Go to the <span class="homePage" routerLink="/home">home page</span> and find something you like!</p>
+</div>
