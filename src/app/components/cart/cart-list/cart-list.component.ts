@@ -33,7 +33,12 @@ export class CartListComponent implements OnInit, OnDestroy {
   }
 
   quantityChange(event, itemId, price) {
-    this.cartService.adjustNumItemsInCart(event.value, this.currentQuantityForItems[itemId], price);
+    this.cartService.adjustNumItemsInCart(event.value, itemId, this.currentQuantityForItems[itemId], price);
+  }
+
+  itemSelectedInCart(trueOrFalseValue, itemId) {
+    console.log('Value: ' + trueOrFalseValue.checked);
+    this.cartService.adjustItemCheckStatus(trueOrFalseValue.checked, itemId);
   }
 
   ngOnDestroy() {

@@ -1,6 +1,6 @@
 <div class="cartItem" *ngFor="let cartItem of cartItems">
     <div class="left">
-        <mat-checkbox [color] = "color"class="example-margin"></mat-checkbox>
+        <mat-checkbox (change)="itemSelectedInCart($event, cartItem.itemId)" [checked]="cartItem.isChecked" [color]="color" class="example-margin"></mat-checkbox>
         <img src="{{ cartItem.imageUrl }}" alt="">
         <div class="itemDetails">
             <div class="itemDescription">

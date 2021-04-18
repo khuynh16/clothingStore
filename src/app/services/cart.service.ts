@@ -33,7 +33,8 @@ export class CartService {
       price: price,
       size: size,
       color: color,
-      quantity: quantity
+      quantity: quantity,
+      isChecked: true
     });
 
     this.cartItemsSubject.next({
@@ -55,9 +56,55 @@ export class CartService {
     });
   }
 
-  adjustNumItemsInCart(newQuantityOfItems, currentQuantValue, price) {
-    this.numItemsInCart = this.numItemsInCart + (newQuantityOfItems - currentQuantValue);
-    this.subtotal = this.subtotal + (price * (newQuantityOfItems - currentQuantValue));
+  adjustNumItemsInCart(newQuantityOfItems, itemId, currentQuantValue, price) {
+    let isChecked = false;
+
+    this.cartItems.forEach(item => {
+      if (item.itemId === itemId) {
+        isChecked = item.isChecked;
+      }
+    });
+
+    if (isChecked) {
+      this.numItemsInCart = this.numItemsInCart + (newQuantityOfItems - currentQuantValue);
+      this.subtotal = this.subtotal + (price * (newQuantityOfItems - currentQuantValue));
+  
+      this.cartItemsSubject.next({
+        cart: this.cartItems,
+        numItems: this.numItemsInCart,
+        subtotal: this.subtotal
+      });
+    }
+  }
+
+  /** 
+  *  Handle cart pricing and number of items in cart when user checks or unchecks
+  *  the box next to any particular item in cart list.
+  *  @param checkStatus true or false in whether item is checked
+  *  @param itemId the id number pertaining to the item that was checked or unchecked
+  *  @return update to behaviorsubject containing the current cart items, number of items,
+  *    and the current subtotal
+  */
+  adjustItemCheckStatus(checkedStatus: boolean, itemId: number) {
+    // find the one particular checked (or unchecked item) and edit the following values/objects
+    // accordingly:
+    // - the particular item's 'isChecked' value
+    // - number of items in cart and subtotal values
+    // - behaviorsubject
+    this.cartItems.forEach(item => {
+      if (item.itemId === itemId) {
+        item.isChecked = checkedStatus;
+        
+        if (checkedStatus === false) {
+          this.numItemsInCart = this.numItemsInCart - item.quantity;
+          this.subtotal = this.subtotal - (item.price * item.quantity); 
+        }
+        else if (checkedStatus === true) {
+          this.numItemsInCart = this.numItemsInCart + item.quantity;
+          this.subtotal = this.subtotal + (item.price * item.quantity); 
+        }
+      }
+    });
 
     this.cartItemsSubject.next({
       cart: this.cartItems,
