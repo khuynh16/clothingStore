@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { CartService } from 'src/app/services/cart.service';
@@ -60,14 +60,14 @@ export class DisplayClothingTemplateComponent implements OnInit {
     // modal popup description of order and direction to take afterwards (continue shopping
     // or go to shopping cart)
     const dialogRef = this.dialog.open(AddToCartModal, {
-      width: '400px',
+      width: '600px',
       data: {
         title: title, 
         subtitle: subtitle,
         imageUrl: imageUrl,
         price: price,
-        size: size,
-        color: color,
+        size: size.value,
+        color: color.value,
         quantity: quantity
       }
     });
@@ -80,15 +80,23 @@ export class DisplayClothingTemplateComponent implements OnInit {
 @Component({
   selector: 'app-add-to-cart-modal',
   templateUrl: './add-to-cart-modal.html',
+  styleUrls: ['./add-to-cart-modal.css']
 })
 export class AddToCartModal {
 
   constructor(
     public dialogRef: MatDialogRef<AddToCartModal>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {}
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private router: Router) {}
 
-  onNoClick(): void {
+  closeModal(): void {
     this.dialogRef.close();
   }
+
+  toShoppingCart(): void {
+    this.dialogRef.close();
+    this.router.navigate(['cart']);
+  }
+
 
 }

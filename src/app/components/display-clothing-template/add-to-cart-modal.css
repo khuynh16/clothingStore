@@ -1,0 +1,58 @@
+:host ::ng-deep .mat-dialog-content {
+    display: flex;
+    padding: 20px 20px 0 20px;
+}
+
+:host ::ng-deep .mat-dialog-content > * {
+    width: 50%;
+}
+
+:host ::ng-deep .mat-dialog-title {
+    text-decoration: underline;
+}
+
+.left h4 {
+    padding-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.right {
+    display: flex;  
+    justify-content: center;
+}
+
+.right img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+:host ::ng-deep .mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+/* :host ::ng-deep .mat-dialog-actions button:nth-child(2) {
+    background-color: #1C2541;
+    color: #9FFFF5;
+    border: 4px solid #5E6973;
+} */
+
+hr {
+    border: 0;
+    border-bottom: 1px solid black;
+    background: #999;
+    width: 100%;
+    margin: 40px 0;
+}
+
+:host ::ng-deep .mat-button-focus-overlay { 
+    background-color: transparent !important; 
+}
+
+button {
+    border: 1px solid black;
+}

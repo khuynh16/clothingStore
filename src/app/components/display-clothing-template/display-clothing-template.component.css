@@ -57,6 +57,10 @@
     padding: 0;
 }
 
+:host ::ng-deep .mat-button-focus-overlay { 
+    background-color: transparent !important; 
+}
+
 :host ::ng-deep mat-card-actions > * {
     padding: 0 5px;
 }
