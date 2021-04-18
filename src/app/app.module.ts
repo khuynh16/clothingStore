@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { CartComponent } from './components/cart/cart.component';
 import { SignInComponent } from './components/auth/sign-in/sign-in.component';
@@ -80,7 +81,8 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     ReactiveFormsModule,
     MatListModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

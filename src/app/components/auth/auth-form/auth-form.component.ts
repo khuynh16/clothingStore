@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { AuthUserService } from 'src/app/services/auth-user.service';
 
 @Component({
   selector: 'app-auth-form',
@@ -14,7 +15,11 @@ export class AuthFormComponent implements OnInit {
   navStatement: string;
   navLink: string;
 
-  constructor(private route: ActivatedRoute, private fb: FormBuilder, private router: Router) {
+  constructor(
+    private route: ActivatedRoute, 
+    private fb: FormBuilder, 
+    private router: Router,
+    public authUserService: AuthUserService) {
     this.currentRoute = route.snapshot.url[0].path;
   }
 
@@ -43,6 +48,7 @@ export class AuthFormComponent implements OnInit {
   onSubmit(form: FormGroup) {
     console.log('hello');
     console.log(form.value);
+    this.authUserService.authenticateUser();
     this.router.navigate(['home']);
   }
 

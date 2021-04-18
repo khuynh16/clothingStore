@@ -14,8 +14,20 @@
     </div>
     <div class="optionsButtons">
         <button mat-button routerLink="/contact-page" routerLinkActive="activeRoute">Contact Us</button>
-        <button mat-button routerLink="/sign-in" routerLinkActive="activeRoute" *ngIf="!onAuthPage">Sign In</button>
-        <button mat-button routerLinkActive="activeRoute">Settings</button>
+        <button mat-button routerLink="/sign-in" routerLinkActive="activeRoute" *ngIf="!onAuthPage && !isAuthorized">Sign In</button>
+        <button *ngIf="isAuthorized" mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            Account<mat-icon class="accountDownArrow">keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="matMenu">
+            <button mat-menu-item>
+                <mat-icon>settings</mat-icon>
+                <span>Settings</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>input</mat-icon>
+                <span>Log out</span>
+            </button>
+        </mat-menu>
         <button mat-button routerLink="/cart" [class.activeRoute]="shoppingCartOrCheckout"><mat-icon>shopping_cart</mat-icon>Your Cart</button>
     </div>
 </mat-toolbar>
