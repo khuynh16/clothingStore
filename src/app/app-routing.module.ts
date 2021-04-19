@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AccountDashboardComponent } from './components/account-dashboard/account-dashboard.component';
 import { SignInComponent } from './components/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
 import { CartComponent } from './components/cart/cart.component';
@@ -12,6 +13,8 @@ import { SocksComponent } from './components/categories/socks/socks.component';
 import { WomenComponent } from './components/categories/women/women.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+// import { SettingsComponent } from './components/account-dashboard/settings/settings.component';
+// import { TransactionHistoryComponent } from './components/account-dashboard/transaction-history/transaction-history.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -27,6 +30,7 @@ const routes: Routes = [
   { path: 'categories/shirts', component: ShirtsComponent },
   { path: 'categories/socks', component: SocksComponent },
   { path: 'contact-page', component: ContactPageComponent },
+  { path: 'account', component: AccountDashboardComponent },
 ];
 
 @NgModule({

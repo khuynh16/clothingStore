@@ -1,0 +1,68 @@
+.container {
+    background-image: linear-gradient( 135deg, #7CFFC4 10%, #6ABEA7);
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    display: flex;
+    width: 90%;
+    max-width: 1070px;
+    height: 85%;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: inset 2000px 2000px 2000px rgb(231 231 231 / 50%);
+    background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+}
+
+app-account-tab-group {
+    width: 100%;
+}
+
+:host ::ng-deep .mat-tab-label {
+    display: flex;
+    flex: 1;
+}
+
+/* :host ::ng-deep .mat-tab-label-active {
+    background-color: #1C2541;
+    color: #9FFFF5;
+} */
+
+:host ::ng-deep .mat-tab-label:first-child {
+    border-radius: 20px 0 0 0;
+}
+
+:host ::ng-deep .mat-tab-label:last-child {
+    border-radius: 0 20px 0 0;
+}
+
+/* :host ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #9FFFF5;
+} */
+
+/* :host ::ng-deep .mat-tab-label:nth-child(2) {
+    -ms-transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+:host ::ng-deep .mat-tab-label:nth-child(2) > * {
+        -ms-transform: skewX(25deg);
+        -webkit-transform: skewX(25deg);
+        transform: skewX(25deg);  
+        display: inline-block;
+}
+
+:host ::ng-deep .mat-ink-bar {
+    display: none;
+} */
+

@@ -1,0 +1,9 @@
+<mat-tab-group animationDuration="0ms" [selectedIndex]="selectedIndex" (selectedTabChange)="tabChange($event)">
+    <mat-tab label="Your Settings">
+        <app-settings></app-settings>
+    </mat-tab>
+    <mat-tab label="Transaction History">
+        <app-transaction-history></app-transaction-history>
+    </mat-tab>
+    <mat-tab label="Track Your Orders">Content 3</mat-tab>
+</mat-tab-group>

@@ -87,7 +87,7 @@ export class AddToCartModal {
   constructor(
     public dialogRef: MatDialogRef<AddToCartModal>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private router: Router) {}
+    private router: Router) { }
 
   closeModal(): void {
     this.dialogRef.close();

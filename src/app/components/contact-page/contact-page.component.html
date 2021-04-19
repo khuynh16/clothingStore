@@ -3,30 +3,23 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit(form)" class="example-form" (keydown.enter)="$event.preventDefault()">
         <h2>Feel free to contact us!</h2>
         <div class="nameRow">
-                
-                <mat-form-field class="example-full-width" appearance="outline">
-                    <mat-icon matPrefix>person</mat-icon>
-                    <mat-label class="test">First Name</mat-label>
-                    <input formControlName="firstName" class="test" matInput>
-                </mat-form-field>
-            
-            
-                
-                <mat-form-field class="example-full-width" appearance="outline">
-                    <mat-icon matPrefix>person</mat-icon>
-                    <mat-label class="test">Last Name</mat-label>
-                    <input formControlName="lastName" class="test" matInput>
-                </mat-form-field>
-            
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-icon matPrefix>person</mat-icon>
+                <mat-label class="test">First Name</mat-label>
+                <input formControlName="firstName" class="test" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+                <mat-icon matPrefix>person</mat-icon>
+                <mat-label class="test">Last Name</mat-label>
+                <input formControlName="lastName" class="test" matInput>
+            </mat-form-field>
         </div>
         <mat-form-field class="example-full-width" appearance="outline">
             <mat-icon matPrefix>email</mat-icon>
             <mat-label class="test">Email</mat-label>
             <input formControlName="email" class="test" matInput>
         </mat-form-field>
-
         <mat-form-field class="example-full-width" appearance="outline">
-            <!-- <mat-icon matPrefix>question_answer</mat-icon> -->
             <mat-label class="test">Your Message or Question</mat-label>
             <textarea rows="10" matInput placeholder="Message or question here..."></textarea>
         </mat-form-field>

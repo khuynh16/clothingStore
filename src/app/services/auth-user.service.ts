@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class AuthUserService {
   private authSubject: BehaviorSubject<any> = new BehaviorSubject({authStatus: false});
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   getAuthStatus() {
     return this.authSubject.asObservable();
@@ -18,5 +19,17 @@ export class AuthUserService {
     this.authSubject.next({
       authStatus: true
     });
+  }
+
+  logout() {
+    console.log('Auth is now signed out.');
+    
+    // popup modal of user signing out here
+
+    this.authSubject.next({
+      authStatus: false
+    });
+
+    this.router.navigate(['/home']);
   }
 }

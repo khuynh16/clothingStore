@@ -19,6 +19,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { CartComponent } from './components/cart/cart.component';
 import { SignInComponent } from './components/auth/sign-in/sign-in.component';
@@ -39,6 +40,10 @@ import { SocksComponent } from './components/categories/socks/socks.component';
 import { AddToCartModal, DisplayClothingTemplateComponent } from './components/display-clothing-template/display-clothing-template.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { SettingsComponent } from './components/account-dashboard/settings/settings.component';
+import { AccountDashboardComponent } from './components/account-dashboard/account-dashboard.component';
+import { AccountTabGroupComponent } from './components/account-dashboard/account-tab-group/account-tab-group.component';
+import { TransactionHistoryComponent } from './components/account-dashboard/transaction-history/transaction-history.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +69,11 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     DisplayClothingTemplateComponent,
     FooterComponent,
     ContactPageComponent,
-    AddToCartModal
+    AddToCartModal,
+    SettingsComponent,
+    AccountDashboardComponent,
+    AccountTabGroupComponent,
+    TransactionHistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +91,8 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     MatListModule,
     MatCheckboxModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

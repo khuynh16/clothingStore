@@ -19,11 +19,19 @@
             Account<mat-icon class="accountDownArrow">keyboard_arrow_down</mat-icon>
         </button>
         <mat-menu #menu="matMenu" class="matMenu">
-            <button mat-menu-item>
+            <button mat-menu-item (click)="toAccountDashboard('settings')">
                 <mat-icon>settings</mat-icon>
-                <span>Settings</span>
+                <span>Your Settings</span>
             </button>
-            <button mat-menu-item>
+            <button mat-menu-item (click)="toAccountDashboard('transaction_history')">
+                <mat-icon>assignment</mat-icon>
+                <span>Transaction History</span>
+            </button>
+            <button mat-menu-item (click)="toAccountDashboard('track_orders')">
+                <mat-icon>location_on</mat-icon>
+                <span>Track Your Orders</span>
+            </button>
+            <button mat-menu-item (click)="logout()">
                 <mat-icon>input</mat-icon>
                 <span>Log out</span>
             </button>
