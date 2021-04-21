@@ -1,0 +1,122 @@
+.container {
+    background-image: linear-gradient( 135deg, #7CFFC4 10%, #6ABEA7);
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard {
+    width: 90%;
+    max-width: 1070px;
+    height: 85%;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: inset 2000px 2000px 2000px rgb(231 231 231 / 50%);
+    background: linear-gradient(to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255,0.3));
+}
+
+app-footer {
+    position: absolute;
+    bottom: -128px;
+    width: 100%;
+}
+
+.dashboard,
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.left,
+.right {
+    width: 50%;
+}
+
+.orderHeading,
+.emailText {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.orderHeading mat-icon {
+    font-size: 40px;
+    padding-left: 30px;
+}
+
+.emailText {
+    font-size: 20px;
+}
+
+section {
+    display: flex;
+}
+
+.left {
+    padding: 25px 0 0 25px;
+}
+
+.left p {
+    font-size: 18px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoSymbol {
+    display: flex;
+    align-items: center;
+    justify-content: inherit;
+    font-family: 'Homemade Apple';
+    font-size: 90px;
+    border: 2px solid #151b1a;
+    padding: -30px;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-top: 40px;
+    transform-origin: center;
+    transform: rotate(10deg);
+box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.orderNumber,
+.delivery,
+.billingAddress,
+.subtotal,
+.tax,
+.total {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 25px;
+}
+
+.tax {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.delivery,
+.billingAddress {
+    text-align: end;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px dashed #000;
+    width: 100%;
+}
+
+h3 {
+    text-decoration: underline;
+}

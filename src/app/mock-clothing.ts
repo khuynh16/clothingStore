@@ -77,7 +77,7 @@ export const CLOTHING_DATABASE = [
     },
     {
       'title': 'Tough as Nails T-Shirt',
-      'subtitle': 'subtitle here',
+      'subtitle': 'Power is Strength',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 19.99,

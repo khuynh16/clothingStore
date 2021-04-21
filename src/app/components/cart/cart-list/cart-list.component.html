@@ -6,8 +6,8 @@
             <div class="itemDescription">
                 <p class="title">{{ cartItem.title }}</p>
                 <p class="subtitle">{{ cartItem.subtitle }}</p>
-                <p>Size: {{ cartItem.size }} </p>
-                <p class="color">Color: {{ cartItem.color }} </p>
+                <p>Size: {{ cartItem.size | titlecase }} </p>
+                <p class="color">Color: {{ cartItem.color | titlecase }} </p>
             </div>
             <div class="actionButtons">
                 <mat-form-field appearance="fill">

@@ -44,6 +44,17 @@ export class CartPricingComponent implements OnInit, OnDestroy {
     });
   }
 
+  navigation(navValue) {
+    // navValue should be 'Proceed to Checkout' or 'Place Order'
+    console.log(navValue + ' : is here!');
+    if (navValue === 'Proceed to Checkout') {
+      this.router.navigate(['/checkout']);
+    }
+    else if (navValue === 'Place Order') {
+      this.router.navigate(['/order-confirmed']);
+    }
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

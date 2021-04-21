@@ -44,6 +44,7 @@ import { SettingsComponent } from './components/account-dashboard/settings/setti
 import { AccountDashboardComponent } from './components/account-dashboard/account-dashboard.component';
 import { AccountTabGroupComponent } from './components/account-dashboard/account-tab-group/account-tab-group.component';
 import { TransactionHistoryComponent } from './components/account-dashboard/transaction-history/transaction-history.component';
+import { OrderConfirmationComponent } from './components/cart/order-confirmation/order-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { TransactionHistoryComponent } from './components/account-dashboard/tran
     AccountDashboardComponent,
     AccountTabGroupComponent,
     TransactionHistoryComponent,
-    EmailSentConfirmationModal
+    EmailSentConfirmationModal,
+    OrderConfirmationComponent
   ],
   imports: [
     BrowserModule,

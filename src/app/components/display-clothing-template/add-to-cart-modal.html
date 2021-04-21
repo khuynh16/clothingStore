@@ -14,17 +14,17 @@
             <li>{{ data.title }}</li>
             <li>{{ data.subtitle }}</li>
             <li>Price: ${{ data.price }}</li>
-            <li *ngIf="data.sizeSet">Size: {{ data.size }}</li>
-            <li *ngIf="data.colorSet">Color: {{ data.color }}</li>
+            <li *ngIf="data.sizeSet">Size: {{ data.size | titlecase }}</li>
+            <li *ngIf="data.colorSet">Color: {{ data.color | titlecase }}</li>
             <li *ngIf="data.quantitySet">Quantity: {{ data.quantity }}</li>
         </ul>
         <br>
         <div *ngIf="!data.allSettingsSet">
             <h4>MISSING DETAILS:</h4>
             <ul>
-                <li *ngIf="!data.sizeSet">Size</li>
-                <li *ngIf="!data.colorSet">Color</li>
-                <li *ngIf="!data.quantitySet">Quantity</li>
+                <li *ngIf="!data.sizeSet"><i>Size</i></li>
+                <li *ngIf="!data.colorSet"><i>Color</i></li>
+                <li *ngIf="!data.quantitySet"><i>Quantity</i></li>
             </ul>
         </div>
     </div>

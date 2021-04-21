@@ -43,26 +43,5 @@ app-account-tab-group {
     border-radius: 0 20px 0 0;
 }
 
-/* :host ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: #9FFFF5;
-} */
 
-/* :host ::ng-deep .mat-tab-label:nth-child(2) {
-    -ms-transform: skewX(-25deg);
-    -webkit-transform: skewX(-25deg);
-    transform: skewX(-25deg);
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-:host ::ng-deep .mat-tab-label:nth-child(2) > * {
-        -ms-transform: skewX(25deg);
-        -webkit-transform: skewX(25deg);
-        transform: skewX(25deg);  
-        display: inline-block;
-}
-
-:host ::ng-deep .mat-ink-bar {
-    display: none;
-} */
 

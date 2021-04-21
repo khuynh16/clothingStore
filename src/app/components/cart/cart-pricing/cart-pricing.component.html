@@ -29,5 +29,5 @@
         </div>
     </div>
     <hr>
-    <button [disabled]= "noItemsInCart" mat-raised-button routerLink="/checkout">{{ toCheckoutOrPlaceOrder }}</button>
+    <button [disabled]= "noItemsInCart" mat-raised-button (click)="navigation(toCheckoutOrPlaceOrder)">{{ toCheckoutOrPlaceOrder }}</button>
 </div>
