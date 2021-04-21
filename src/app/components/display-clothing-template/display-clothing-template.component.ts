@@ -57,6 +57,23 @@ export class DisplayClothingTemplateComponent implements OnInit {
 
   addToCart(title, subtitle, imageUrl, price, size, color, quantity) {
 
+    let sizeSet = false;
+    let colorSet = false;
+    let quantitySet = false;
+    let allSettingsSet = false;
+
+    // assign individual variables to determine if user had selected a value for it
+    if (size.value !== '')
+      sizeSet = true;
+    if (color.value !== '')
+      colorSet = true;
+    if (quantity !== '')
+      quantitySet = true;
+    
+    // assign overall boolean value to determine if add to cart is to be successful or not
+    if (size.value !== '' && color.value !== '' && quantity !== '')
+      allSettingsSet = true;
+
     // modal popup description of order and direction to take afterwards (continue shopping
     // or go to shopping cart)
     const dialogRef = this.dialog.open(AddToCartModal, {
@@ -68,15 +85,20 @@ export class DisplayClothingTemplateComponent implements OnInit {
         price: price,
         size: size.value,
         color: color.value,
-        quantity: quantity
+        quantity: quantity,
+        sizeSet: sizeSet,
+        colorSet: colorSet,
+        quantitySet: quantitySet,
+        allSettingsSet: allSettingsSet
       }
     });
 
-    this.cartService.addToCart(title, subtitle, imageUrl, price, size.value, color.value, quantity);
+    if (allSettingsSet)
+      this.cartService.addToCart(title, subtitle, imageUrl, price, size.value, color.value, quantity);
   }
 }
 
-// component for modal
+// component for "successfully adding to cart" modal
 @Component({
   selector: 'app-add-to-cart-modal',
   templateUrl: './add-to-cart-modal.html',
@@ -97,6 +119,27 @@ export class AddToCartModal {
     this.dialogRef.close();
     this.router.navigate(['cart']);
   }
-
-
 }
+
+// // component for "adding to cart failed" modal
+// @Component({
+//   selector: 'app-add-to-cart-fail-modal',
+//   templateUrl: './add-to-cart-fail-modal.html',
+//   styleUrls: ['./add-to-cart-modal-fail.css']
+// })
+// export class AddToCartFailModal {
+
+//   constructor(
+//     public dialogRef: MatDialogRef<AddToCartFailModal>,
+//     @Inject(MAT_DIALOG_DATA) public data: any,
+//     private router: Router) { }
+
+//   closeModal(): void {
+//     this.dialogRef.close();
+//   }
+
+//   toShoppingCart(): void {
+//     this.dialogRef.close();
+//     this.router.navigate(['cart']);
+//   }
+// }

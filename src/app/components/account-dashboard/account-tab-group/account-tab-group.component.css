@@ -1,3 +1,5 @@
-
+:host ::ng-deep .mat-tab-label {
+    font-size: 16px;
+}
 
 

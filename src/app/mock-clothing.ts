@@ -4,7 +4,7 @@
 
 export const CLOTHING_DATABASE = [
     {
-      'title': 'Men\'s T-shirt',
+      'title': 'Men\'s Track Shirt',
       'subtitle': 'Astronaut Design',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
@@ -13,8 +13,8 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/male shirt template.jpeg'
     },
     {
-      'title': 'example title',
-      'subtitle': 'subtitle here',
+      'title': 'Women\'s Track Shirt',
+      'subtitle': '100% Cotton',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 59.99,
@@ -22,8 +22,8 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/female shirt template.png'
     },
     {
-      'title': 'example title',
-      'subtitle': 'subtitle here',
+      'title': 'Hatter Box',
+      'subtitle': 'Edition #2',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 35.99,
@@ -31,8 +31,8 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/hat template.png'
     },
     {
-      'title': 'example title',
-      'subtitle': 'subtitle here',
+      'title': 'Men\s Concert of Life Shirt',
+      'subtitle': 'April Live Performance Limited Edition',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 80.99,
@@ -40,8 +40,8 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/male shirt template.jpeg'
     },
     {
-      'title': 'example title',
-      'subtitle': 'subtitle here',
+      'title': 'Men\s Final Flight T-Shirt',
+      'subtitle': 'Edition #1',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 40.99,
@@ -49,8 +49,8 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/male shirt template.jpeg'
     },
     {
-      'title': 'example title',
-      'subtitle': 'subtitle here',
+      'title': 'Life is Beautiful Hat',
+      'subtitle': 'Rerun',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 29.99,
@@ -58,8 +58,8 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/hat template.png'
     },
     {
-      'title': 'example title',
-      'subtitle': 'subtitle here',
+      'title': 'Overhead Classic Hat',
+      'subtitle': 'Classic',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 39.99,
@@ -67,8 +67,8 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/hat template.png'
     },
     {
-      'title': 'example title',
-      'subtitle': 'subtitle here',
+      'title': 'Birds & Flowers Hat',
+      'subtitle': 'Gentle Breeze is All You Need',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
       'price': 49.99,
@@ -76,7 +76,7 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/hat template.png',
     },
     {
-      'title': 'example title',
+      'title': 'Tough as Nails T-Shirt',
       'subtitle': 'subtitle here',
       'sizes': ['small', 'medium', 'large'],
       'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
@@ -85,8 +85,8 @@ export const CLOTHING_DATABASE = [
       'image': '../../assets/images/female shirt template.png'
     },
     {
-        'title': 'example title',
-        'subtitle': 'subtitle here',
+        'title': 'Overhead Classic T-Shirt',
+        'subtitle': 'Classic',
         'sizes': ['small', 'medium', 'large'],
         'colors': ['red', 'green', 'blue', 'purple', 'yellow'],
         'price': 19.99,

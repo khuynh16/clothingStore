@@ -6,6 +6,24 @@
     color: #BDFFFD;
 }
 
+/* .logo button {
+    border-top: 3px solid;
+    border-radius: 10px;
+        border-left: 1px solid;
+        border-top: 3px solid;
+        border-right: 1px solid;
+        padding: 4px;
+        border-radius: 10px;
+        border-bottom: 3px solid;
+} */
+
+.logoName {
+    font-family: 'audiowide';
+    font-size: 25px;
+    text-decoration: overline;
+    margin-top: 5px;
+}
+
 .logo,
 .clothingNavButtons,
 .optionsButtons {

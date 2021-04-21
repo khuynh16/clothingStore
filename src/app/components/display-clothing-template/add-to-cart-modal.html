@@ -1,15 +1,32 @@
-<h1 mat-dialog-title>Added to shopping cart!</h1>
+<h1 mat-dialog-title>
+    <p *ngIf="data.allSettingsSet">Added to shopping cart!</p>
+    <div class="failedAddTitle" *ngIf="!data.allSettingsSet">
+        <mat-icon>error</mat-icon>
+        Adding to shopping cart failed.
+        <mat-icon>error</mat-icon>
+    </div>
+</h1>
 <div mat-dialog-content>
     <div class="left">
-        <h4>Details:</h4>
+        <h4 *ngIf="data.allSettingsSet">Details:</h4>
+        <h4 *ngIf="!data.allSettingsSet">Available Details:</h4>
         <ul>
             <li>{{ data.title }}</li>
             <li>{{ data.subtitle }}</li>
             <li>Price: ${{ data.price }}</li>
-            <li>Size: {{ data.size }}</li>
-            <li>Color: {{ data.color }}</li>
-            <li>Quantity: {{ data.quantity }}</li>
+            <li *ngIf="data.sizeSet">Size: {{ data.size }}</li>
+            <li *ngIf="data.colorSet">Color: {{ data.color }}</li>
+            <li *ngIf="data.quantitySet">Quantity: {{ data.quantity }}</li>
         </ul>
+        <br>
+        <div *ngIf="!data.allSettingsSet">
+            <h4>MISSING DETAILS:</h4>
+            <ul>
+                <li *ngIf="!data.sizeSet">Size</li>
+                <li *ngIf="!data.colorSet">Color</li>
+                <li *ngIf="!data.quantitySet">Quantity</li>
+            </ul>
+        </div>
     </div>
     <div class="right">
         <img src="{{ data.imageUrl }}" alt="">
@@ -17,6 +34,9 @@
 </div>
 <hr>
 <div mat-dialog-actions>
-    <button mat-raised-button (click)="closeModal()">Continue Shopping</button>
-    <button mat-raised-button (click)="toShoppingCart()">To Shopping Cart</button>
+    <button mat-raised-button *ngIf="data.allSettingsSet" (click)="closeModal()">Continue Shopping</button>
+    <button mat-raised-button *ngIf="data.allSettingsSet" (click)="toShoppingCart()">To Shopping Cart</button>
+    <button mat-raised-button *ngIf="!data.allSettingsSet" (click)="closeModal()" >Ok</button>
+    <button mat-raised-button *ngIf="!data.allSettingsSet" (click)="toShoppingCart()" >To Shopping Cart Anyway</button>
+
 </div>

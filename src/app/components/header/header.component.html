@@ -1,7 +1,9 @@
 <mat-toolbar>
     <div class="logo">
         <button mat-button routerLink="/home">
-            Clothing Store :D
+            <p class="logoName">
+                Overhead
+            </p>
         </button>
     </div>
     <div class="clothingNavButtons">
@@ -36,6 +38,9 @@
                 <span>Log out</span>
             </button>
         </mat-menu>
-        <button mat-button routerLink="/cart" [class.activeRoute]="shoppingCartOrCheckout"><mat-icon>shopping_cart</mat-icon>Your Cart</button>
+        <button mat-button routerLink="/cart" [class.activeRoute]="shoppingCartOrCheckout">
+            <mat-icon>shopping_cart</mat-icon>
+            Your Cart
+        </button>
     </div>
 </mat-toolbar>
