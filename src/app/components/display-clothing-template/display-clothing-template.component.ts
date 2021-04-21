@@ -98,7 +98,7 @@ export class DisplayClothingTemplateComponent implements OnInit {
   }
 }
 
-// component for "successfully adding to cart" modal
+// component for adding to cart modal
 @Component({
   selector: 'app-add-to-cart-modal',
   templateUrl: './add-to-cart-modal.html',
@@ -120,26 +120,3 @@ export class AddToCartModal {
     this.router.navigate(['cart']);
   }
 }
-
-// // component for "adding to cart failed" modal
-// @Component({
-//   selector: 'app-add-to-cart-fail-modal',
-//   templateUrl: './add-to-cart-fail-modal.html',
-//   styleUrls: ['./add-to-cart-modal-fail.css']
-// })
-// export class AddToCartFailModal {
-
-//   constructor(
-//     public dialogRef: MatDialogRef<AddToCartFailModal>,
-//     @Inject(MAT_DIALOG_DATA) public data: any,
-//     private router: Router) { }
-
-//   closeModal(): void {
-//     this.dialogRef.close();
-//   }
-
-//   toShoppingCart(): void {
-//     this.dialogRef.close();
-//     this.router.navigate(['cart']);
-//   }
-// }

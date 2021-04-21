@@ -39,7 +39,7 @@ import { ShirtsComponent } from './components/categories/shirts/shirts.component
 import { SocksComponent } from './components/categories/socks/socks.component';
 import { AddToCartModal, DisplayClothingTemplateComponent } from './components/display-clothing-template/display-clothing-template.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { EmailSentConfirmationModal, ContactPageComponent } from './components/contact-page/contact-page.component';
 import { SettingsComponent } from './components/account-dashboard/settings/settings.component';
 import { AccountDashboardComponent } from './components/account-dashboard/account-dashboard.component';
 import { AccountTabGroupComponent } from './components/account-dashboard/account-tab-group/account-tab-group.component';
@@ -73,7 +73,8 @@ import { TransactionHistoryComponent } from './components/account-dashboard/tran
     SettingsComponent,
     AccountDashboardComponent,
     AccountTabGroupComponent,
-    TransactionHistoryComponent
+    TransactionHistoryComponent,
+    EmailSentConfirmationModal
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+.closeButtonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+}
+
+.closeButtonDiv button {
+    border: 1px solid black;
+}
