@@ -51,6 +51,8 @@ export class CartPricingComponent implements OnInit, OnDestroy {
       this.router.navigate(['/checkout']);
     }
     else if (navValue === 'Place Order') {
+
+      // somehow determine if values are filled in payment info and shipping info components
       this.router.navigate(['/order-confirmed']);
     }
   }

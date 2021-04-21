@@ -10,26 +10,26 @@
             <mat-form-field class="" appearance="outline">
                 <mat-icon matPrefix>credit_card</mat-icon>
                 <mat-label class="test">Credit Card Number</mat-label>
-                <input class="test" matInput>
+                <input class="test" matInput (change)="updateCustomerBehaviorSubject(14)" [(ngModel)]="creditCardNumber">
             </mat-form-field>
         </div>
         <div class="nameOnCard">
             <mat-form-field class="" appearance="outline">
                 <mat-icon matPrefix>person</mat-icon>
                 <mat-label class="test">Name On Card</mat-label>
-                <input class="test" matInput>
+                <input class="test" matInput (change)="updateCustomerBehaviorSubject(15)" [(ngModel)]="nameOnCard">
             </mat-form-field>
         </div>
         <div class="cscAndExpirationDate">
             <mat-form-field class="" appearance="outline">
                 <mat-icon matPrefix>date_range</mat-icon>
                 <mat-label class="test">Expiration Date (MM/DD/YYYY)</mat-label>
-                <input class="test" matInput>
+                <input class="test" matInput (change)="updateCustomerBehaviorSubject(16)" [(ngModel)]="expirationDate">
             </mat-form-field>
             <mat-form-field class="" appearance="outline">
                 <mat-icon matPrefix>fiber_pin</mat-icon>
                 <mat-label class="test">Card Security Code (CSC)</mat-label>
-                <input class="test" matInput>
+                <input class="test" matInput (change)="updateCustomerBehaviorSubject(17)" [(ngModel)]="cardSecurityCode">
             </mat-form-field>
         </div>
     </section>
